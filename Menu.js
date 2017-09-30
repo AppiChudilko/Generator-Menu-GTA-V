@@ -210,13 +210,11 @@ function Menu() {
         API.triggerServerEvent(functionName, args);
     };
 
-    this.destroyMenu = function(close) {
+    this.destroyMenu = function() {
         if(mainMenu !== null)
             mainMenu.Visible = false;
         
         disableAllControls = false;
-        
-        if(typeof close === "undefined") API.triggerServerEvent("close_server_menu");
 
         mainMenu = null;
         this.menuPool = null;

@@ -34,7 +34,7 @@ function Menu() {
 
         this.destroyMenu();
 
-        title = typeof title !== "undefined" ? title : "Меню";
+        title = typeof title !== "undefined" ? title : "Menu";
         subTitle = typeof subTitle !== "undefined" ? subTitle : "";
         isResetKey = typeof isResetKey !== "undefined" ? isResetKey : false;
         anchor = typeof anchor !== "undefined" ? anchor : 6;
@@ -57,7 +57,7 @@ function Menu() {
 
     this.addMenuItem = function(title, subTitle, isActivateInvisibleMenu, isActivated, callFunction) {
 
-        title = typeof title !== "undefined" ? title : "Меню";
+        title = typeof title !== "undefined" ? title : "Menu";
         subTitle = typeof subTitle !== "undefined" ? subTitle : "";
         isActivateInvisibleMenu = typeof isActivateInvisibleMenu !== "undefined" ? isActivateInvisibleMenu : true;
         isActivated = typeof isActivated !== "undefined" ? isActivated : false;
@@ -112,7 +112,7 @@ function Menu() {
 
     this.addCheckBoxItem = function(title, subTitle, defaultValue, isActivateInvisibleMenu, isActivated, callFunction) {
 
-        title = typeof title !== "undefined" ? title : "Меню";
+        title = typeof title !== "undefined" ? title : "Menu";
         subTitle = typeof subTitle !== "undefined" ? subTitle : "";
         defaultValue = typeof defaultValue !== "undefined" ? defaultValue : true;
         isActivateInvisibleMenu = typeof isActivateInvisibleMenu !== "undefined" ? isActivateInvisibleMenu : true;
@@ -141,7 +141,7 @@ function Menu() {
 
     this.addListItem = function(title, subTitle, list, isActivateInvisibleMenu, isActivated, isListChanged, callChangeFunction, callFunction) {
 
-        title = typeof title !== "undefined" ? title : "Меню";
+        title = typeof title !== "undefined" ? title : "Menu";
         subTitle = typeof subTitle !== "undefined" ? subTitle : "";
         list = typeof list !== "undefined" ? list : "undefined";
         isActivateInvisibleMenu = typeof isActivateInvisibleMenu !== "undefined" ? isActivateInvisibleMenu : true;
@@ -185,7 +185,7 @@ function Menu() {
 
     this.addCloseButton = function(closeTriggerEvent) {
         var destroyMenu = this.destroyMenu;
-        var menuItem = API.createMenuItem("~r~Закрыть", "");
+        var menuItem = API.createMenuItem("~r~Close", "");
 
         menuItem.Activated.connect(function (menu, item) {
             

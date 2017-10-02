@@ -16,19 +16,12 @@ function callServerTrigger(args) {
     API.triggerServerEvent(args[0] /*testServerEvent*/, args[1] /*2*/, args[2] /*false*/);
 }
 
-API.onUpdate.connect(function() {
-    if (menu.menuPool !== null) {
-        menu.menuPool.ProcessMenus();
-    }
-});
-
 //**************************************
 //************[Class Menu]**************
 //**************************************
 
 function Menu() {
     var mainMenu = null;
-    this.menuPool = API.getMenuPool();
 
     this.createMenu = function(title, subTitle, isResetKey, isDisableAllControls, posX, posY, anchor) {
 
@@ -42,7 +35,6 @@ function Menu() {
         posY = typeof posY !== "undefined" ? posY : 0;
 
         mainMenu = API.createMenu(title, subTitle, posX, posY, anchor);
-        this.menuPool.Add(mainMenu);
         mainMenu.Visible = true;
         mainMenu.RefreshIndex();
 
@@ -217,13 +209,7 @@ function Menu() {
         disableAllControls = false;
 
         mainMenu = null;
-        this.menuPool = null;
-        this.menuPool = API.getMenuPool();
 
         return true;
-    };
-
-    this.getMenuPool = function() {
-        return this.menuPool;
     };
 }
